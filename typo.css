@@ -1,0 +1,311 @@
+/*
+  __ _  ___  ___ ___   ___   ___     ____ _ __ ___   ___
+ / _` |/  / / __/ _ \ / _ \ /  /    / __/| '_ ` _ \ /  /
+| (_| |\  \| (_| (_) | (_) |\  \   | (__ | | | | | |\  \
+ \__,_|/__/ \___\___/ \___/ /__/    \___\|_| |_| |_|/__/
+                                                                  
+*************************************************************************************
+* @ Project ASCOOS                                                                  *
+* @ Copyright (C) 2007 - 2012 AlexSoft Software.                                    *
+* @ Address: Konstantinoupoleos 88, GR 68100, Alexandroupolis, Evros, Greece        *
+* @ Tel: +30 2551 031999                                                            *
+* @ Creator: Drogidis Christos                                                      *
+* @ ASCOOS CMS Site: www.ascoos.com                                                 *
+* @ Creator Site: www.alexsoft.gr                                                   *
+* @ emails: webmaster@ascoos.com, webmaster@alexsoft.gr                             *
+* @ license site: http://www.alexsoft.gr/licence/ascoos/index.php                   *
+* @ Copyrighted Commercial Software                                                 *
+* @ Program ASCOOS CMS Manager                                                      *
+*************************************************************************************
+
+* @ Package           : ASCOOS CMS - Frontend
+* @ Subpackage        : Themes - Typography - Zocial CSS Buttons For Ascoos Typography
+* @ ASCOOS Version    : Lite - 1.0.0
+* @ File Name         : /themes/typography/zocial_css_buttons_for_ascoos/typo.css
+* @ File No.          : 1 - $release: 1.0 - $revision: 0 - $build: 0
+* @ Created Date      : 2012-05-31 22:00:00 UTC+2 
+* @ Updated Date      : 
+* @ Author            : Drogidis Christos
+* @ Author email      : webmaster@alexsoft.gr
+* @ Author website    : www.alexsoft.gr
+*
+
+
+# Zocial CSS social buttons
+**************************************************************************************
+I basically rewrote this entire set so they are full vector buttons, meaning:
+
+- @font-face icons
+- custom font file for all social icons
+- icon font use private unicode spaces for accessibility
+- em sizing based on button font-size
+- support for about 81 different services
+- buttons and icons supported
+- no raster images (sweet)
+- works splendidly on any browser supporting @font-face
+- CSS3 degrades gracefully in IE8 and below etc.
+- also includes generic icon-less primary and secondary buttons
+
+## How to use these buttons
+<button class='zocial facebook'>Button label here</button>
+or
+<a class="zocial twitter'>Button label</a>
+
+- Can be any element e.g. `a`, `div`, `button` etc.
+- Add class of `.zocial`
+- Add class for name of service e.g. `.dropbox`, `.twitter`, `.github`
+- Done :-)
+
+Check out [zocial.smcllns.com](http://zocial.smcllns.com) for demo and code examples.
+Problems, questions or requests to [@smcllns](http://twitter.com/smcllns)
+*/
+@font-face{font-family:'zocial';font-style:normal;font-weight:normal;src:url('fonts/zocial-regular-webfont.eot');src:url('fonts/zocial-regular-webfont.eot?#iefix') format('embedded-opentype'),
+url('fonts/zocial-regular-webfont.woff') format('woff'),
+url('fonts/zocial-regular-webfont.ttf') format('truetype'),
+url('fonts/zocial-regular-webfont.svg#ZocialRegular') format('svg');}
+.zocial-typo,
+a.zocial-typo{border:1px solid #777;border-color:rgba(0,0,0,0.2);border-bottom-color:#333;border-bottom-color:rgba(0,0,0,0.4);color:#fff;-moz-box-shadow:inset 0 0.08em 0 rgba(255,255,255,0.4), inset 0 0 0.1em rgba(255,255,255,0.9);-webkit-box-shadow:inset 0 0.08em 0 rgba(255,255,255,0.4), inset 0 0 0.1em rgba(255,255,255,0.9);box-shadow:inset 0 0.08em 0 rgba(255,255,255,0.4), inset 0 0 0.1em rgba(255,255,255,0.9);cursor:pointer;display:inline-block;font:bold 100%/2.1 "Lucida Grande", Tahoma, sans-serif;padding:0 .95em 0 0;text-align:center;text-decoration:none;text-shadow:0 1px 0 rgba(0,0,0,0.5);-moz-user-select:none;-webkit-user-select:none;user-select:none;position:relative;z-index:100;-moz-border-radius:.3em;-webkit-border-radius:.3em;border-radius:.3em;}
+.zocial-typo::before{content:"";border-right:0.075em solid rgba(0,0,0,0.1);float:left;font:120%/1.65 zocial;font-style:normal;font-weight:normal;margin:0 0.5em 0 0;padding:0 0.5em;text-align:center;text-decoration:none;text-transform:none;-moz-box-shadow:0.075em 0 0 rgba(255,255,255,0.25);-webkit-box-shadow:0.075em 0 0 rgba(255,255,255,0.25);box-shadow:0.075em 0 0 rgba(255,255,255,0.25);-webkit-font-smoothing:antialiased;}
+.zocial-typo:active{outline:none;}
+a.zocial-for-ascoos-typo-icon{overflow:hidden;max-width:2.4em;padding-left:0;padding-right:0;max-height:2.15em;white-space:nowrap;}
+a.zocial-for-ascoos-typo-icon::before{padding:0;width:2em;height:2em;box-shadow:none;border:none;}
+.zocial-typo{background-image:-moz-linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.05) 49%, rgba(0,0,0,.05) 51%, rgba(0,0,0,.1));background-image:-ms-linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.05) 49%, rgba(0,0,0,.05) 51%, rgba(0,0,0,.1));background-image:-o-linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.05) 49%, rgba(0,0,0,.05) 51%, rgba(0,0,0,.1));background-image:-webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.1)), color-stop(49%, rgba(255,255,255,.05)), color-stop(51%, rgba(0,0,0,.05)), to(rgba(0,0,0,.1)));background-image:-webkit-linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.05) 49%, rgba(0,0,0,.05) 51%, rgba(0,0,0,.1));background-image:linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.05) 49%, rgba(0,0,0,.05) 51%, rgba(0,0,0,.1));}
+.zocial-typo:hover, .zocial-typo:focus{background-image:-moz-linear-gradient(rgba(255,255,255,.15) 49%, rgba(0,0,0,.1) 51%, rgba(0,0,0,.15));background-image:-ms-linear-gradient(rgba(255,255,255,.15) 49%, rgba(0,0,0,.1) 51%, rgba(0,0,0,.15));background-image:-o-linear-gradient(rgba(255,255,255,.15) 49%, rgba(0,0,0,.1) 51%, rgba(0,0,0,.15));background-image:-webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.15)), color-stop(49%, rgba(255,255,255,.15)), color-stop(51%, rgba(0,0,0,.1)), to(rgba(0,0,0,.15)));background-image:-webkit-linear-gradient(rgba(255,255,255,.15) 49%, rgba(0,0,0,.1) 51%, rgba(0,0,0,.15));background-image:linear-gradient(rgba(255,255,255,.15) 49%, rgba(0,0,0,.1) 51%, rgba(0,0,0,.15));}
+.zocial-typo:active{background-image:-moz-linear-gradient(bottom, rgba(255,255,255,.1), rgba(255,255,255,0) 30%, transparent 50%, rgba(0,0,0,.1));background-image:-ms-linear-gradient(bottom, rgba(255,255,255,.1), rgba(255,255,255,0) 30%, transparent 50%, rgba(0,0,0,.1));background-image:-o-linear-gradient(bottom, rgba(255,255,255,.1), rgba(255,255,255,0) 30%, transparent 50%, rgba(0,0,0,.1));background-image:-webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.1)), color-stop(30%, rgba(255,255,255,0)), color-stop(50%, transparent), to(rgba(0,0,0,.1)));background-image:-webkit-linear-gradient(bottom, rgba(255,255,255,.1), rgba(255,255,255,0) 30%, transparent 50%, rgba(0,0,0,.1));background-image:linear-gradient(bottom, rgba(255,255,255,.1), rgba(255,255,255,0) 30%, transparent 50%, rgba(0,0,0,.1));}
+a.zocial-for-ascoos-typo-bitcoin,
+a.zocial-for-ascoos-typo-cloudapp,
+a.zocial-for-ascoos-typo-dropbox,
+a.zocial-for-ascoos-typo-email,
+a.zocial-for-ascoos-typo-eventful,
+a.zocial-for-ascoos-typo-github,
+a.zocial-for-ascoos-typo-gmail,
+a.zocial-for-ascoos-typo-instapaper,
+a.zocial-for-ascoos-typo-itunes,
+a.zocial-for-ascoos-typo-ninetyninedesigns,
+a.zocial-for-ascoos-typo-openid,
+a.zocial-for-ascoos-typo-plancast,
+a.zocial-for-ascoos-typo-posterous,
+a.zocial-for-ascoos-typo-reddit,
+a.zocial-for-ascoos-typo-secondary,
+a.zocial-for-ascoos-typo-viadeo,
+a.zocial-for-ascoos-typo-weibo,
+a.zocial-for-ascoos-typo-wikipedia{border:1px solid #aaa;border-color:rgba(0,0,0,0.3);border-bottom-color:#777;border-bottom-color:rgba(0,0,0,0.5);-moz-box-shadow:inset 0 0.08em 0 rgba(255,255,255,0.7), inset 0 0 0.08em rgba(255,255,255,0.5);-webkit-box-shadow:inset 0 0.08em 0 rgba(255,255,255,0.7), inset 0 0 0.08em rgba(255,255,255,0.5);box-shadow:inset 0 0.08em 0 rgba(255,255,255,0.7), inset 0 0 0.08em rgba(255,255,255,0.5);text-shadow:0 1px 0 rgba(255,255,255,0.8);}
+a.zocial-for-ascoos-typo-bitcoin:focus,
+a.zocial-for-ascoos-typo-bitcoin:hover,
+a.zocial-for-ascoos-typo-dropbox:focus,
+a.zocial-for-ascoos-typo-dropbox:hover,
+a.zocial-for-ascoos-typo-email:focus,
+a.zocial-for-ascoos-typo-email:hover,
+a.zocial-for-ascoos-typo-eventful:focus,
+a.zocial-for-ascoos-typo-eventful:hover,
+a.zocial-for-ascoos-typo-github:focus,
+a.zocial-for-ascoos-typo-github:hover,
+a.zocial-for-ascoos-typo-gmail:focus,
+a.zocial-for-ascoos-typo-gmail:hover,
+a.zocial-for-ascoos-typo-instapaper:focus,
+a.zocial-for-ascoos-typo-instapaper:hover,
+a.zocial-for-ascoos-typo-itunes:focus,
+a.zocial-for-ascoos-typo-itunes:hover,
+a.zocial-for-ascoos-typo-ninetyninedesigns:focus,
+a.zocial-for-ascoos-typo-ninetyninedesigns:hover,
+a.zocial-for-ascoos-typo-openid:focus,
+a.zocial-for-ascoos-typo-openid:hover,
+a.zocial-for-ascoos-typo-plancast:focus,
+a.zocial-for-ascoos-typo-plancast:hover,
+a.zocial-for-ascoos-typo-posterous:focus,
+a.zocial-for-ascoos-typo-posterous:hover,
+a.zocial-for-ascoos-typo-reddit:focus,
+a.zocial-for-ascoos-typo-reddit:hover,
+a.zocial-for-ascoos-typo-secondary:focus,
+a.zocial-for-ascoos-typo-secondary:hover,
+a.zocial-for-ascoos-typo-twitter:focus,
+a.zocial-for-ascoos-typo-viadeo:focus,
+a.zocial-for-ascoos-typo-viadeo:hover,
+a.zocial-for-ascoos-typo-weibo:focus,
+a.zocial-for-ascoos-typo-weibo:hover,
+a.zocial-for-ascoos-typo-wikipedia:focus,
+a.zocial-for-ascoos-typo-wikipedia:hover{background-image:-webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.5)), color-stop(49%, rgba(255,255,255,0.2)), color-stop(51%, rgba(0,0,0,0.05)), to(rgba(0,0,0,0.15)));background-image:-moz-linear-gradient(top, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15));background-image:-webkit-linear-gradient(top, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15));background-image:-o-linear-gradient(top, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15));background-image:-ms-linear-gradient(top, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15));background-image:linear-gradient(top, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15));}
+a.zocial-for-ascoos-typo-bitcoin:active,
+a.zocial-for-ascoos-typo-dropbox:active,
+a.zocial-for-ascoos-typo-email:active,
+a.zocial-for-ascoos-typo-eventful:active,
+a.zocial-for-ascoos-typo-github:active,
+a.zocial-for-ascoos-typo-gmail:active,
+a.zocial-for-ascoos-typo-instapaper:active,
+a.zocial-for-ascoos-typo-itunes:active,
+a.zocial-for-ascoos-typo-ninetyninedesigns:active,
+a.zocial-for-ascoos-typo-openid:active,
+a.zocial-for-ascoos-typo-plancast:active,
+a.zocial-for-ascoos-typo-posterous:active,
+a.zocial-for-ascoos-typo-reddit:active,
+a.zocial-for-ascoos-typo-secondary:active,
+a.zocial-for-ascoos-typo-viadeo:active,
+a.zocial-for-ascoos-typo-weibo:active,
+a.zocial-for-ascoos-typo-wikipedia:active{background-image:-webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0)), color-stop(30%, rgba(255,255,255,0)), color-stop(50%, rgba(0,0,0,0)), to(rgba(0,0,0,0.1)));background-image:-moz-linear-gradient(bottom, rgba(255,255,255,0), rgba(255,255,255,0) 30%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.1));background-image:-webkit-linear-gradient(bottom, rgba(255,255,255,0), rgba(255,255,255,0) 30%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.1));background-image:-o-linear-gradient(bottom, rgba(255,255,255,0), rgba(255,255,255,0) 30%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.1));background-image:-ms-linear-gradient(bottom, rgba(255,255,255,0), rgba(255,255,255,0) 30%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.1));background-image:linear-gradient(bottom, rgba(255,255,255,0), rgba(255,255,255,0) 30%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.1));}
+a.zocial-for-ascoos-typo-amazon::before{content:"\E040";}
+a.zocial-for-ascoos-typo-android::before{content:"\E005";}
+a.zocial-for-ascoos-typo-aol::before{content:"\E001";}
+a.zocial-for-ascoos-typo-appstore::before{content:"\E020";}
+a.zocial-for-ascoos-typo-bitcoin::before{content:"\E011";color:#f7931a;}
+a.zocial-for-ascoos-typo-blogger::before{content:"\E021";}
+a.zocial-for-ascoos-typo-call::before{content:"\E016";}
+a.zocial-for-ascoos-typo-cal::before{content:"\E00D";}
+a.zocial-for-ascoos-typo-cart::before{content:"\E06A";}
+a.zocial-for-ascoos-typo-chrome::before{content:"\E03A";}
+a.zocial-for-ascoos-typo-cloudapp::before{content:"\E042";}
+a.zocial-for-ascoos-typo-creativecommons::before{content:"\E022";}
+a.zocial-for-ascoos-typo-delicious::before{content:"\E002";}
+a.zocial-for-ascoos-typo-digg::before{content:"\E01A";}
+a.zocial-for-ascoos-typo-disqus::before{content:"\E030";}
+a.zocial-for-ascoos-typo-dribbble::before{content:"\E023";}
+a.zocial-for-ascoos-typo-dropbox::before{content:"\E043";color:#1f75cc;}
+a.zocial-for-ascoos-typo-email::before{content:"\E03C";color:#312c2a;}
+a.zocial-for-ascoos-typo-eventasaurus::before{content:"\E055";color:#9de428;}
+a.zocial-for-ascoos-typo-eventbrite::before{content:"\E05B";}
+a.zocial-for-ascoos-typo-eventful::before{content:"\E006";color:#0066CC;}
+a.zocial-for-ascoos-typo-evernote::before{content:"\E024";}
+a.zocial-for-ascoos-typo-facebook::before{content:"\E045";}
+a.zocial-for-ascoos-typo-fivehundredpx::before{content:"\E00F";color:#29b6ff;}
+a.zocial-for-ascoos-typo-flattr::before{content:"\E004";}
+a.zocial-for-ascoos-typo-flickr::before{content:"\E025";}
+a.zocial-for-ascoos-typo-forrst::before{content:"\E019";color:#50894f;}
+a.zocial-for-ascoos-typo-foursquare::before{content:"\E013";}
+a.zocial-for-ascoos-typo-github::before{content:"\E046";}
+a.zocial-for-ascoos-typo-gmail::before{content:"\E04C";color:#f00;}
+a.zocial-for-ascoos-typo-google::before{content:"\E026";}
+a.zocial-for-ascoos-typo-googleplay::before{content:"\E05E";}
+a.zocial-for-ascoos-typo-googleplus::before{content:"\E00A";}
+a.zocial-for-ascoos-typo-gowalla::before{content:"\E01F";}
+a.zocial-for-ascoos-typo-grooveshark::before{content:"\E017";}
+a.zocial-for-ascoos-typo-guest::before{content:"\E01E";}
+a.zocial-for-ascoos-typo-html5::before{content:"\E014";}
+a.zocial-for-ascoos-typo-ie::before{content:"\E015";}
+a.zocial-for-ascoos-typo-instapaper::before{content:"\E028";}
+a.zocial-for-ascoos-typo-intensedebate::before{content:"\E05A";}
+a.zocial-for-ascoos-typo-itunes::before{content:"\E048";color:#1a6dd2;}
+a.zocial-for-ascoos-typo-klout::before{content:"\E02A";}
+a.zocial-for-ascoos-typo-lanyrd::before{content:"\E00C";}
+a.zocial-for-ascoos-typo-lastfm::before{content:"\E04B";}
+a.zocial-for-ascoos-typo-linkedin::before{content:"\E02B";}
+a.zocial-for-ascoos-typo-macstore::before{content:"\E03D";}
+a.zocial-for-ascoos-typo-meetup::before{content:"\E02C";}
+a.zocial-for-ascoos-typo-myspace::before{content:"\E03E";}
+a.zocial-for-ascoos-typo-ninetyninedesigns::before{content:"\E018";color:#f50;}
+a.zocial-for-ascoos-typo-openid::before{content:"\E04E";color:#ff921d;}
+a.zocial-for-ascoos-typo-opentable::before{content:"\E05F";}
+a.zocial-for-ascoos-typo-paypal::before{content:"\E003";}
+a.zocial-for-ascoos-typo-pinboard::before{content:"\E04D";}
+a.zocial-for-ascoos-typo-pinterest::before{content:"\E010";}
+a.zocial-for-ascoos-typo-plancast::before{content:"\E02F";}
+a.zocial-for-ascoos-typo-plurk::before{content:"\E049";}
+a.zocial-for-ascoos-typo-podcast::before{content:"\E03F";}
+a.zocial-for-ascoos-typo-posterous::before{content:"\E05D";}
+a.zocial-for-ascoos-typo-print::before{content:"\E06B";}
+a.zocial-for-ascoos-typo-quora::before{content:"\E050";}
+a.zocial-for-ascoos-typo-reddit::before{content:"\E01D";color:red;}
+a.zocial-for-ascoos-typo-rss::before{content:"\E031";}
+a.zocial-for-ascoos-typo-scribd::before{content:"\E05C";color:#00d5ea;}
+a.zocial-for-ascoos-typo-skype::before{content:"\E032";}
+a.zocial-for-ascoos-typo-smashing::before{content:"\E009";}
+a.zocial-for-ascoos-typo-songkick::before{content:"\E04A";}
+a.zocial-for-ascoos-typo-soundcloud::before{content:"\E052";}
+a.zocial-for-ascoos-typo-spotify::before{content:"\E01C";}
+a.zocial-for-ascoos-typo-stumbleupon::before{content:"\E00E";}
+a.zocial-for-ascoos-typo-tumblr::before{content:"\E053";}
+a.zocial-for-ascoos-typo-twitter::before{content:"\E033";}
+a.zocial-for-ascoos-typo-viadeo::before{content:"\E027";color:#f59b20;}
+a.zocial-for-ascoos-typo-vimeo::before{content:"\E035";}
+a.zocial-for-ascoos-typo-weibo::before{content:"\E029";color:#e6162d;}
+a.zocial-for-ascoos-typo-wikipedia::before{content:"\E00B";}
+a.zocial-for-ascoos-typo-windows::before{content:"\E036";}
+a.zocial-for-ascoos-typo-xing::before{content:"\E037"}
+a.zocial-for-ascoos-typo-wordpress::before{content:"\E056";}
+a.zocial-for-ascoos-typo-yahoo::before{content:"\E038";}
+a.zocial-for-ascoos-typo-yelp::before{content:"\E058";}
+a.zocial-for-ascoos-typo-youtube::before{content:"\E034";}
+a.zocial-for-ascoos-typo-amazon{background-color:#ffad1d;color:#030037;text-shadow:0 1px 0 rgba(255,255,255,0.5);}
+a.zocial-for-ascoos-typo-android{background-color:#a4c639;}
+a.zocial-for-ascoos-typo-aol{background-color:#f00;}
+a.zocial-for-ascoos-typo-appstore{background-color:#000;}
+a.zocial-for-ascoos-typo-bitcoin{background-color:#efefef;color:#4d4d4d;}
+a.zocial-for-ascoos-typo-blogger{background-color:#ee5a22;}
+a.zocial-for-ascoos-typo-call{background-color:#008000;}
+a.zocial-for-ascoos-typo-cal{background-color:#d63538;}
+a.zocial-for-ascoos-typo-cart{background-color:#333;}
+a.zocial-for-ascoos-typo-chrome{background-color:#006cd4;}
+a.zocial-for-ascoos-typo-cloudapp{background-color:#fff;color:#312c2a;}
+a.zocial-for-ascoos-typo-creativecommons{background-color:#000;}
+a.zocial-for-ascoos-typo-delicious{background-color:#3271cb;}
+a.zocial-for-ascoos-typo-digg{background-color:#164673;}
+a.zocial-for-ascoos-typo-disqus{background-color:#5d8aad;}
+a.zocial-for-ascoos-typo-dribbble{background-color:#ea4c89;}
+a.zocial-for-ascoos-typo-dropbox{background-color:#fff;color:#312c2a;}
+a.zocial-for-ascoos-typo-email{background-color:#f0f0eb;color:#312c2a;}
+a.zocial-for-ascoos-typo-eventasaurus{background-color:#192931;color:#fff;}
+a.zocial-for-ascoos-typo-eventbrite{background-color:#ff5616;}
+a.zocial-for-ascoos-typo-eventful{background-color:#fff;color:#47ab15;}
+a.zocial-for-ascoos-typo-evernote{background-color:#6bb130;color:#fff;}
+a.zocial-for-ascoos-typo-facebook{background-color:#4863ae;}
+a.zocial-for-ascoos-typo-fivehundredpx{background-color:#333;}
+a.zocial-for-ascoos-typo-flattr{background-color:#8aba42;}
+a.zocial-for-ascoos-typo-flickr{background-color:#ff0084;}
+a.zocial-for-ascoos-typo-forrst{background-color:#1e360d;}
+a.zocial-for-ascoos-typo-foursquare{background-color:#44a8e0;}
+a.zocial-for-ascoos-typo-github{background-color:#fbfbfb;color:#050505;}
+a.zocial-for-ascoos-typo-gmail{background-color:#efefef;color:#222;}
+a.zocial-for-ascoos-typo-google{background-color:#4e6cf7;}
+a.zocial-for-ascoos-typo-googleplay{background-color:#000;}
+a.zocial-for-ascoos-typo-googleplus{background-color:#dd4b39;}
+a.zocial-for-ascoos-typo-gowalla{background-color:#ff720a;}
+a.zocial-for-ascoos-typo-grooveshark{background-color:#111;color:#eee;}
+a.zocial-for-ascoos-typo-guest{background-color:#1b4d6d;}
+a.zocial-for-ascoos-typo-html5{background-color:#ff3617;}
+a.zocial-for-ascoos-typo-ie{background-color:#00a1d9;}
+a.zocial-for-ascoos-typo-instapaper{background-color:#eee;color:#222;}
+a.zocial-for-ascoos-typo-intensedebate{background-color:#0099e1;}
+a.zocial-for-ascoos-typo-klout{background-color:#e34a25;}
+a.zocial-for-ascoos-typo-itunes{background-color:#efefeb;color:#312c2a;}
+a.zocial-for-ascoos-typo-lanyrd{background-color:#2e6ac2;}
+a.zocial-for-ascoos-typo-lastfm{background-color:#dc1a23;}
+a.zocial-for-ascoos-typo-linkedin{background-color:#0083a8;}
+a.zocial-for-ascoos-typo-macstore{background-color:#007dcb}
+a.zocial-for-ascoos-typo-meetup{background-color:#ff0026;}
+a.zocial-for-ascoos-typo-myspace{background-color:#000;}
+a.zocial-for-ascoos-typo-ninetyninedesigns{background-color:#fff;color:#072243;}
+a.zocial-for-ascoos-typo-openid{background-color:#f5f5f5;color:#333;}
+a.zocial-for-ascoos-typo-opentable{background-color:#990000;}
+a.zocial-for-ascoos-typo-paypal{background-color:#fff;color:#32689a;text-shadow:0 1px 0 rgba(255,255,255,0.5);}
+a.zocial-for-ascoos-typo-pinboard{background-color:blue;}
+a.zocial-for-ascoos-typo-pinterest{background-color:#c91618;}
+a.zocial-for-ascoos-typo-plancast{background-color:#e7ebed;color:#333;}
+a.zocial-for-ascoos-typo-plurk{background-color:#cf682f;}
+a.zocial-for-ascoos-typo-podcast{background-color:#9365ce;}
+a.zocial-for-ascoos-typo-posterous{background-color:#ffd959;color:#bc7134;}
+a.zocial-for-ascoos-typo-print{background-color:#f0f0eb;color:#222;text-shadow:0 1px 0 rgba(255,255,255,0.8);}
+a.zocial-for-ascoos-typo-quora{background-color:#a82400;}
+a.zocial-for-ascoos-typo-reddit{background-color:#fff;color:#222;}
+a.zocial-for-ascoos-typo-rss{background-color:#ff7f25;}
+a.zocial-for-ascoos-typo-scribd{background-color:#231c1a;}
+a.zocial-for-ascoos-typo-skype{background-color:#00a2ed;}
+a.zocial-for-ascoos-typo-smashing{background-color:#ff4f27;}
+a.zocial-for-ascoos-typo-songkick{background-color:#ff0050;}
+a.zocial-for-ascoos-typo-soundcloud{background-color:#ff4500;}
+a.zocial-for-ascoos-typo-spotify{background-color:#60af00;}
+a.zocial-for-ascoos-typo-stumbleupon{background-color:#eb4924;}
+a.zocial-for-ascoos-typo-tumblr{background-color:#374a61;}
+a.zocial-for-ascoos-typo-twitter{background-color:#46c0fb;}
+a.zocial-for-ascoos-typo-viadeo{background-color:#fff;color:#000;}
+a.zocial-for-ascoos-typo-vimeo{background-color:#00a2cd;}
+a.zocial-for-ascoos-typo-weibo{background-color:#faf6f1;color:#000;}
+a.zocial-for-ascoos-typo-wikipedia{background-color:#fff;color:#000;}
+a.zocial-for-ascoos-typo-windows{background-color:#0052a4;color:#fff;}
+a.zocial-for-ascoos-typo-wordpress{background-color:#464646;}
+a.zocial-for-ascoos-typo-xing{background-color:#0A5D5E;}
+a.zocial-for-ascoos-typo-yahoo{background-color:#a200c2;}
+a.zocial-for-ascoos-typo-yelp{background-color:#e60010;}
+a.zocial-for-ascoos-typo-youtube{background-color:#f00;}
+a.zocial-for-ascoos-typo-primary, a.zocial-for-ascoos-typo-secondary{margin:0.1em 0;padding:0 1em;}
+a.zocial-for-ascoos-typo-primary::before, a.zocial-for-ascoos-typo-secondary::before{display:none;}
+a.zocial-for-ascoos-typo-primary{background-color:#333;}
+a.zocial-for-ascoos-typo-secondary{background-color:#f0f0eb;color:#222;text-shadow:0 1px 0 rgba(255,255,255,0.8);}
+button.zocial-for-ascoos-typo::-moz-focus-inner{border:0;padding:0;}
